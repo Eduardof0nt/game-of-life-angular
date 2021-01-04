@@ -129,7 +129,6 @@ export class AppComponent {
       }
       jsonArray.push(row);
     }
-    console.log(jsonArray);
     var blob: any = new Blob([JSON.stringify(jsonArray)], {
       type: 'octet/stream',
     });
@@ -143,7 +142,6 @@ export class AppComponent {
   }
 
   fileSelected(files: any) {
-    console.log(files);
     let reader = new FileReader();
     let file = files[0];
     reader.readAsText(file);
